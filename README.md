@@ -2,6 +2,9 @@
 
 Clean, dependency-free Minesweeper built with vanilla HTML, CSS, and JS.
 
+## Web Link
+https://tanveersinghd.github.io/Minesweeper/
+
 ## Features
 - Safe first click with lazy mine seeding.
 - Flood-fill zero expansion and win/lose detection.
