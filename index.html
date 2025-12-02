@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minesweeper</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="panel">
+      <header class="panel__header">
+        <div>
+          <h1>Minesweeper</h1>
+        </div>
+        <div class="actions">
+          <button id="resetBtn" class="btn">New Game</button>
+          <button id="peekBtn" class="btn btn--ghost" aria-pressed="false">Peek</button>
+          <button id="hintBtn" class="btn btn--ghost" aria-pressed="false">Hint</button>
+        </div>
+      </header>
+      <div class="controls">
+        <div class="control control--split control--presets">
+          <button data-preset="8x8x10" class="pill">Easy</button>
+          <button data-preset="12x12x25" class="pill">Medium</button>
+          <button data-preset="16x16x45" class="pill">Hard</button>
+        </div>
+        <div class="control">
+          <label for="rows">Rows</label>
+          <input id="rows" type="number" min="4" max="20" value="9">
+        </div>
+        <div class="control">
+          <label for="cols">Cols</label>
+          <input id="cols" type="number" min="4" max="20" value="9">
+        </div>
+        <div class="control">
+          <label for="mines">Mines</label>
+          <input id="mines" type="number" min="1" max="300" value="10">
+        </div>
+        <div class="status">
+          <div>
+            <p class="label">Mines</p>
+            <p id="mineCounter" class="value">10</p>
+          </div>
+          <div>
+            <p class="label">Timer</p>
+            <p id="timer" class="value">000</p>
+          </div>
+          <div>
+            <p class="label">State</p>
+            <p id="state" class="value">Ready</p>
+          </div>
+        </div>
+      </div>
+      <div class="board-shell">
+        <div id="board" class="board" role="grid" aria-label="Minesweeper board"></div>
+      </div>
+      <footer class="panel__footer">
+        <p>Left click to reveal. Right click to flag. Clearing zeros will auto-expand. Hit <strong>New Game</strong> to reshuffle at any time.</p>
+      </footer>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
